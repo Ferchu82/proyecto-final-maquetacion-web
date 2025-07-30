@@ -9,10 +9,6 @@
   color: white;
 }
 
-body {
-  background-color: black; /* TODO: borrar cuando tengamos el fondo final */
-}
-
 header {
   position: fixed; /* esto hace que se quede fijo en la parte superior */
   right: 0;
@@ -113,7 +109,7 @@ section {
 }
 
 .hero-img img:hover {
-  width: 710px;
+  width: 700px;
   opacity: 0.6;
 }
 
@@ -192,6 +188,11 @@ section {
   .hero-img img {
     width: 600px;
   }
+
+  .hero-img img:hover {
+    width: 615px;
+    opacity: 0.6;
+  }
 }
 
 /* Laptops grandes */
@@ -236,6 +237,11 @@ section {
   .hero-img img {
     margin: 0 auto;
     width: 300px;
+  }
+
+  .hero-img img:hover {
+    width: 315px;
+    opacity: 0.6;
   }
 
   .icons {
@@ -299,6 +305,11 @@ section {
     width: 300px;
   }
 
+  .hero-img img:hover {
+    width: 315px;
+    opacity: 0.6;
+  }
+
   .hero-text h1 {
     font-size: 40px;
   }
@@ -333,6 +344,11 @@ section {
     width: 300px;
   }
 
+  .hero-img img:hover {
+    width: 315px;
+    opacity: 0.6;
+  }
+
   .hero-text p {
     font-size: 100%;
   }
@@ -358,5 +374,10 @@ section {
 
   .hero-img img {
     width: 250px;
+  }
+
+  .hero-img img:hover {
+    width: 275px;
+    opacity: 0.6;
   }
 }
