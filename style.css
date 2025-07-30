@@ -1,0 +1,362 @@
+/* NORMALIZACIÓN */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Mantiene ancho y alto a pesar de padding y border */
+  font-family: "Roboto", sans-serif;
+  list-style: none; /* Quitar los puntos de decoración de las listas */
+  text-decoration: none; /* Esto quita el subrayado de los enlaces */
+  color: white;
+}
+
+body {
+  background-color: black; /* TODO: borrar cuando tengamos el fondo final */
+}
+
+header {
+  position: fixed; /* esto hace que se quede fijo en la parte superior */
+  right: 0;
+  top: 0;
+  z-index: 100; /* Esto hace que el header se muestre por encima */
+  width: 100%;
+  display: flex; /* Estohará que los elementos se pongan en linea */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Hace que los elementos se separen */
+  padding: 15px 3%;
+  background-color: transparent;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.navlist {
+  display: flex; /*  Sirve para que los elementos de la lista UL se pongan en linea */
+}
+
+.navlist a {
+  margin-left: 60px; /* Es para separar las palabras */
+  font-size: 25px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent; /* Esto es un subrayado transparente */
+  transition: all 0.5 ease 0s; /* Esto es para animar todas las caracteristicas del .navlist a */
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white; /* Este es un subrayado blanco que aparecera cuando hagamos hover */
+}
+
+#menu-icon {
+  display: none; /*Lo pongo en NON para que solo se vea cuando la pagina esta colapsada de forma horizontal */
+}
+
+#menu-icon {
+  font-size: 40px;
+  z-index: 101; /* Para que este sobre el header */
+  cursor: pointer; /* Para que aparezca la manito */
+}
+
+#menu-toggle {
+  display: none; /* Nunca quiero que se vea el checkbox */
+}
+
+.menu-icon-action {
+  display: none; /* Para que no se le pueda hacer click */
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh; /* Ocupa todo el alto minimo disponible */
+  background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  padding: 0 8%;
+}
+
+.hero-text h5 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.hero-text h4 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  line-height: 1;
+  margin: 0 0 30px;
+}
+
+.hero-text p {
+  font-size: 130%;
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+
+.hero-img img {
+  width: 685px;
+  margin: 10px 0 0 10px;
+  height: auto;
+  transition: all 5s linear;
+}
+
+.hero-img img:hover {
+  width: 710px;
+  opacity: 0.6;
+}
+
+.hero-text a {
+  display: inline-block;
+  background-color: #4d4d4d;
+  border: 1px solid transparent;
+  padding: 15px;
+  line-height: 1.4;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.hero-text a:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.trabajos {
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 20px;
+}
+
+.hero-text a.trabajos i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icons {
+  position: absolute;
+  top: 50vh;
+  padding: 0 3%;
+  transform: translateY(-50%);
+}
+
+.icons i {
+  display: block;
+  margin: 26px;
+  font-size: 35px;
+  transition: all 0.5s ease;
+}
+
+.icons i:hover {
+  color: #4d4d4d;
+  transform: translateY(-5px);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 3%;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 30px;
+  background-color: #21383d;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.scroll-down i:hover {
+  transform: translateY(-5px);
+}
+
+/* ========== MEDIA QUERIES RESPONSIVE ========== */
+
+/* Ajuste desde tu monitor */
+@media (max-width: 1635px) {
+  .hero-img img {
+    width: 600px;
+  }
+}
+
+/* Laptops grandes */
+@media (max-width: 1440px) {
+  .hero-text h5 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+
+  .hero-text h4 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .hero-text h1 {
+    font-size: 45px;
+  }
+  .navlist a {
+    margin-left: 40px;
+  }
+
+  .icons {
+    display: none;
+  }
+}
+
+/* Laptops estándar */
+@media (max-width: 1200px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h5 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-top: 80px;
+  }
+
+  .hero-img img {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .icons {
+    display: none;
+  }
+}
+
+/* Tablets horizontales */
+@media (max-width: 992px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .menu-icon-action {
+    display: block;
+    z-index: 101;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  #menu-toggle:checked ~ .navlist {
+    display: flex;
+  }
+
+  .navlist a {
+    margin: 20px 0;
+    font-size: 22px;
+  }
+
+  .icons,
+  .scroll-down {
+    display: none;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .hero-text p {
+    font-size: 115%;
+  }
+}
+
+/* Tablets verticales */
+@media (max-width: 768px) {
+  .hero-img img {
+    width: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text h4 {
+    font-size: 30px;
+  }
+
+  .hero-text h5 {
+    font-size: 25px;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 576px) {
+  header {
+    padding: 10px 5%;
+  }
+
+  .hero-text a,
+  .hero-text a.trabajos {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 300px;
+  }
+
+  .hero-text p {
+    font-size: 100%;
+  }
+}
+
+/* iPhones pequeños */
+@media (max-width: 375px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h4 {
+    font-size: 22px;
+  }
+
+  .hero-text h5 {
+    font-size: 18px;
+  }
+
+  .hero-text p {
+    font-size: 95%;
+  }
+
+  .hero-img img {
+    width: 250px;
+  }
+}
